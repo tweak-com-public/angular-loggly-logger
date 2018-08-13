@@ -1,4 +1,11 @@
 /**
+ * @Author: Matteo Zambon <Matteo>
+ * @Date:   2018-08-13 11:06:43
+ * @Last modified by:   Matteo
+ * @Last modified time: 2018-08-13 01:14:36
+ */
+
+/**
  *  logglyLogger is a module which will send your log messages to a configured
  *  [Loggly](http://loggly.com) connector.
  *
@@ -247,7 +254,7 @@
           }
 
           //Ajax call to send data to loggly
-          $http.post(buildUrl(),sentData,config);
+          $http.post(buildUrl(),sentData,config).catch(console.error);
         };
 
         var attach = function() {
@@ -283,6 +290,18 @@
               self.fields( d );
             }
             return self.fields();
+          },
+
+          /**
+           * Get or set logToConsole
+           * @param d
+           * @returns {*}
+           */
+          setLogToConsole: function( d ) {
+            if( angular.isDefined( d ) ) {
+              self.logToConsole( d );
+            }
+            return self.logToConsole();
           }
         };
       }];

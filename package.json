@@ -1,6 +1,6 @@
 {
-  "name": "angular-loggly-logger",
-  "version": "0.3.1",
+  "name": "@tweak-org/angular-loggly-logger",
+  "version": "0.3.1-tweak.1",
   "main": "index.js",
   "description": "An AngularJs service and $log decorator for Loggly",
   "repository": {
